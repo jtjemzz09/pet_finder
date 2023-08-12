@@ -8,6 +8,9 @@ const app = express();
 // Set the port for the server
 const PORT = 8080;
 
+// Serve static files from the 'public' folder
+app.use(express.static('public'));
+
 // Define a route to handle the homepage request
 app.get('/', (req, res) => {
     // Send the HTML file for the homepage
